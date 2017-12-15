@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+    <script>
+    function LCD (num1,num2) {
+        for(let count=1; count<=num1; count++) { 
+            //if num1 divides evenly into num2*count
+            if( (num2*count) % num1 ==0) {   
+                return (num2*count)
+                }
+            }
+        }
+        
+     function addFractions(num1,num2,num3,num4) {
+         
+         let numer1 = 1;
+         let numer2 = 3;
+         let denom1 = 6;
+         let denom2 = 8;
+         
+         let ansdenom = LCD(denom1,denom2)
+         
+         let factor1 = ansdenom/denom1;
+         numer1 = factor1*numer1;
+         let factor2 = ansdenom/denom2;
+         numer2 = numer2*factor2;
+         let ansnumer = numer1+numer2;
+         
+         console.log ( "The answer is " + ansnumer + "/" + ansdenom )
+     }
+     
+             
+    console.log("The LCD of 28 and 50 is " + LCD(8,12));        
+    addFractions(1,6,3,8);         
+    addFractions(2,5,7,12);
+        
+
+        
+    </script>    
+    </body>
+</html>
